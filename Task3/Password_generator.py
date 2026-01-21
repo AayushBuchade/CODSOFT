@@ -10,13 +10,18 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 
-password1 = ''
+password_list =[]
+for char in range(0,nr_letters):
+    password_list.append(random.choice(letters))
+for char in range(0,nr_symbols):
+    password_list.append(random.choice(symbols))
+for char in range(0,nr_numbers):
+    password_list.append(random.choice(numbers))
 
-for i in range(0, nr_letters):
-    password1 += letters[random.randint(0, len(letters) - 1)]
-for i in range(0, nr_symbols):
-    password1 += symbols[random.randint(0, len(symbols) - 1)]
-for i in range(0, nr_numbers):
-    password1 += numbers[random.randint(0, len(numbers) - 1)]
+random.shuffle(password_list)
 
-print(f"Easy password generator: {password1}")
+password=""
+for char in password_list:
+    password += char
+
+print (f"Your password is {password}")
