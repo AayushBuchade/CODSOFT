@@ -33,8 +33,11 @@ options = [rock, paper, scissors]
 
 user_input = int(input("Choose 1 for Rock, 2 for Paper, and 3 for Scissors: "))
 
-user_choice = user_input - 1
+if user_input not in [1, 2, 3]:
+    print("❌ Invalid choice! Please choose 1, 2, or 3.")
+    exit()
 
+user_choice = user_input - 1
 computer_choice = random.randint(0, 2)
 
 print("\nYou chose:")

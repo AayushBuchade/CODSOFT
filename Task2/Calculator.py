@@ -1,7 +1,7 @@
 def show_menu():
-    print("\n" + "=" * 30)
+    print("\n" + "=" * 36)
     print("        PYTHON CALCULATOR")
-    print("=" * 30)
+    print("=" * 36)
     print("1. Addition (+)")
     print("2. Subtraction (-)")
     print("3. Multiplication (*)")
